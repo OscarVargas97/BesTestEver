@@ -2,7 +2,7 @@
 Realmente considero que esta es una de las pruebas técnicas mas creativa e interesante que he realizado.
 
 ## Docs
-Puedes encontrar la documentación de la solución en [aquí](Test.md), en este enlace explico algunas decisiones de diseño y como mantener el orden en caso de querer implementar nuevas funcionalidades.
+Puedes encontrar la documentación de la solución en [aquí](docs/Docs.md), en este enlace explico algunas decisiones de diseño y como mantener el orden en caso de querer implementar nuevas funcionalidades.
 
 ## Enunciado
 
@@ -20,7 +20,7 @@ Tienes que consultar todos los `character`, `locations` y `episodes` de la api e
     - para cada `episode`, indicar la cantidad y un listado con las `location` (`origin`) de todos los `character` que aparecieron en ese `episode` (sin repetir)
     - cuánto tardó el programa 👆 en total (desde inicio ejecución hasta entrega de resultados)
 
-Para leer el enunciado completo, te invito a dar click en el siguiente enlace: [Test.md](Test.md)
+Para leer el enunciado completo, te invito a dar click en el siguiente enlace: [Test.md](docs/Test.md)
 
 ## Agradecimientos
 
