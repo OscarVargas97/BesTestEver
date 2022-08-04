@@ -2,7 +2,7 @@
 Realmente considero que esta es una de las pruebas técnicas mas creativa e interesante que he realizado.
 
 ## Docs
-Puedes encontrar la documentación de la solución en [aquí](docs/Docs.md), en este enlace explico algunas decisiones de diseño y como mantener el orden en caso de querer implementar nuevas funcionalidades.
+Puedes encontrar la documentación de la solución en [aquí](docs/Documentation.md), en este enlace explico algunas decisiones de diseño y como mantener el orden en caso de querer implementar nuevas funcionalidades.
 
 ## Enunciado
 
