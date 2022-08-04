@@ -24,7 +24,7 @@ Para organizar el proyecto se decidió por seguir el modelo Model-View-Controlle
         * partial
             
 
-## Archivos relevantes
+## Archivos relevantes y consideraciones
 Dentro de la declaración realizada anteriormente, es necesario resaltar algunos archivos, para entender como es que se debe agregar por ejemplo, nuevos modelos, controladores, vistas o rutas.
 En los siguientes apartados se abordara los puntos mencionados anteriormente.
 
@@ -52,7 +52,7 @@ se debe realizar la inclusion de las nuevas rutas de la siguiente manera:
 ```
 Finalmente, index.js se encarga re recibir este archivo ya agregarlo al proyecto, adjuntando asi todos los enrutamientos.
 
-### Agregar controladores
+## Agregar controladores
 
 ### Agregar modelos
 
