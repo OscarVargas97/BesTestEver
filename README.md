@@ -22,6 +22,11 @@ Tienes que consultar todos los `character`, `locations` y `episodes` de la api e
 
 Para leer el enunciado completo, te invito a dar click en el siguiente enlace: [Test.md](docs/Test.md)
 
+## Puesta en marcha
+```console
+    $ 
+```
+
 ## Agradecimientos
 
 De antemano muchas gracias al equipo de Chipax por revisar mi prueba de postulación, no tengo mucha experiencia en la industria del desarrollo, pero si muchas ganas de aprender y constante aprendizaje. Por lo mismo, me encantaría que sin importar el resultado me puedan dar un feedback respecto a que cosas debo mejorar.
