@@ -93,4 +93,4 @@ Esto con el fin no exponer la información sensible de nuestro sistemas.
 ## Base de datos
 Pienso continuar el proyecto con el fin de crear algo que mostrar en mi portafolios, por lo cual, actualmente no he construido la base de datos que quiero implementar para escalar.
 ### Modelo Relacional
-[](https://memecreator.org/static/images/memes/5485764.jpg)
+![Descripción de la imagen](https://memecreator.org/static/images/memes/5485764.jpg)
