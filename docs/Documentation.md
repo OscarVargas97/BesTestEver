@@ -52,7 +52,7 @@ se debe realizar la inclusion de las nuevas rutas de la siguiente manera:
 ```
 Finalmente, index.js se encarga re recibir este archivo ya agregarlo al proyecto, adjuntando asi todos los enrutamientos.
 
-## Agregar controladores
+### Agregar controladores
 
 ### Agregar modelos
 
