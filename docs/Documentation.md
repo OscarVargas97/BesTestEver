@@ -4,27 +4,25 @@ A continuación explicare algunas decisiones de diseño y como mantener el códi
 ## MVC
 
 ## Directorios
-Para organizar el proyecto se decidió por seguir el modelo Model-View-Controller, por lo cual el proyecto se organiza de la siguiente manera: 
+Para organizar el proyecto se decidió por seguir el modelo Model-View-Controller, por lo cual el proyecto se organiza de la siguiente manera:
 
-- src (Carpeta donde se encuentra el código de la aplicación)
-    - controller (Carpeta donde ira la lógica a implementar en nuestras rutas y gestionar las vistas)
-        - user.controller.js
+* src (Carpeta donde se encuentra el código de la aplicación)
+    * controller (Carpeta donde ira la lógica a implementar en nuestras rutas y gestionar las vistas)
+        * user.controller.js
         ...
-    - models (Carpeta donde se declarara la abstracción de los modelos de la base de datos)
-        - user.model.js
+    * models (Carpeta donde se declarara la abstracción de los modelos de la base de datos)
+        * user.model.js
         ...
-    - routes (Carpeta donde se indicaran las distintas direcciones http y sus llamados a controladores)
-        - index.js
-        - user.js
+    * routes (Carpeta donde se indicaran las distintas direcciones http y sus llamados a controladores)
+        * index.js
+        * user.js
         ...
-    - Static (Carpeta donde estará el contenido estático, tales como imágenes, javascript y css)
-    - views (Carpeta donde estará el código de html de nuestros )
-        - Home 
-            -
-        - Layout
-            -
-        - Partial
-            -
+    * Static (Carpeta donde estará el contenido estático, tales como imágenes, javascript y css)
+    * views (Carpeta donde estará el código de html de nuestros )
+        * home 
+        * layout
+        * partial
+            
 
 ## Archivos relevantes
 Dentro de la declaración realizada anteriormente, es necesario resaltar algunos archivos, para entender como es que se debe agregar por ejemplo, nuevos modelos, controladores, vistas o rutas.
