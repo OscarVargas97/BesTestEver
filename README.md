@@ -2,7 +2,7 @@
 Realmente considero que esta es una de las pruebas técnicas mas creativa e interesante que he realizado.
 
 ## Docs
-Puedes encontrar la documentación de la solución en [aquí](docs/Documentation.md), en este enlace explico algunas decisiones de diseño y como mantener el orden en caso de querer implementar nuevas funcionalidades.
+Puedes encontrar la documentación de la solución [aquí](docs/Documentation.md), en este enlace explico algunas decisiones de diseño y como mantener el orden en caso de querer implementar nuevas funcionalidades.
 
 ## Enunciado
 
@@ -26,6 +26,10 @@ Para leer el enunciado completo, te invito a dar click en el siguiente enlace: [
 ```console
     $ 
 ```
+
+## Mejoras a implementar
+* Docker (Lo manejo, pero aun se me dificulta crear imagenes desde 0, no tengo en consideración todas las variables y conexiones que se necesitaran)
+* React (aprendiendo)
 
 ## Agradecimientos
 

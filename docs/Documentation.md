@@ -2,9 +2,12 @@
 A continuación explicare algunas decisiones de diseño y como mantener el código de manera ordenada, por favor si desea ingresar nuevo código mantener el patron de diseño establecido.
 
 ## MVC
+Si bien, la solicitud del enunciado se podría realizar sin establecer un patron de arquitectura, siempre es bueno aprovechar para practicar conceptos y agregar nuevos proyectos al portafolio (jiji).
+
+Personalmente me gusta iniciar un proyecto considerando que no se debe "matar a una mosca con una bazuca", pero por otro lado, también creo que las soluciones que debemos crear siempre deben estar orientadas a ser legibles y escalables. Por lo cual, no esta demás implementar un modelo que permita organizar y disminuir la carga cognitiva por scripts, ademas de facilitar a aquellos que desean leer el código.
 
 ## Directorios
-Para organizar el proyecto se decidió por seguir el modelo Model-View-Controller, por lo cual el proyecto se organiza de la siguiente manera:
+Para organizar el proyecto se decidió por seguir el modelo Model-View-Controller, por lo cual los directorios se organiza de la siguiente manera:
 
 * src (Carpeta donde se encuentra el código de la aplicación)
     * controller (Carpeta donde ira la lógica a implementar en nuestras rutas y gestionar las vistas)
@@ -50,16 +53,44 @@ se debe realizar la inclusion de las nuevas rutas de la siguiente manera:
     outer.use(require('./ejemplo.js'))
     ...
 ```
+Es importante mencionar que todas las rutas que agregamos, deben encontrarse en la carpeta routes.
+
 Finalmente, index.js se encarga re recibir este archivo ya agregarlo al proyecto, adjuntando asi todos los enrutamientos.
 
 ### Agregar controladores
-
+En el caso de querer agregar un nuevo controlador, este debe ir en la carpeta de controladores y debe tener un nombre descriptivo, este debe contener el sufijo .controller por ejemplo:
+```
+    NombreMuyDescriptivoComoNo.controller.js
+``` 
 ### Agregar modelos
 
-### Organización de las rutas
-
 ### Organización de las vistas
+En el caso de querer crear una nueva vista, para nuestro proyecto debemos agregar el código html, siguiendo un criterio tal que:
+
+Aquellos archivos que correspondan al o bienvenida de nuestro sistema, deben ir en la carpeta home.
+
+Todo contenido Html del Layout en la carpeta Layout.
+
+Todo Contenido parcial en la carpeta parcial.
+
+El resto de contenido......
+El resto de contenido......
+...
+...
+Sigo pensando en ello jiji :D
+
+### Contenido estático
+Los archivos ccs, html e imágenes deben ir incluidos en su carpeta correspondiente dentro de la carpeta Static.
 
 ## Variables de entorno
+Las variables de entorno se manejaran desde un archivo .env, con el fin de evitar el exponer contenido sensible en el código fuente de nuestra aplicación. Se implemento el modulo dotenv, el cual se encarga de cargas las variables declaradas en el .env a las variables de entorno de nuestro sistema. 
+Es esencial que toda aquella información, tales como token, contraseñas o credenciales, se ingresen como variables de entorno y que posteriormente se consuman en la aplicación utilizando el comando: 
+```javascript
+
+```
+Esto con el fin no exponer la información sensible de nuestro sistemas.
 
 ## Base de datos
+Pienso continuar el proyecto con el fin de crear algo que mostrar en mi portafolios, por lo cual, actualmente no he construido la base de datos que quiero implementar para escalar.
+### Modelo Relacional
+[](https://memecreator.org/static/images/memes/5485764.jpg)
