@@ -1,6 +1,11 @@
 # BesTestEver
-Realmente considero que esta es una de las pruebas técnicas mas creativa e interesante que he realizado, 
+Realmente considero que esta es una de las pruebas técnicas mas creativa e interesante que he realizado.
+
+## Docs
+Puedes encontrar la documentación de la solución [aquí](docs/Documentation.md), en este enlace explico algunas decisiones de diseño y como mantener el orden en caso de querer implementar nuevas funcionalidades.
+
 ## Enunciado
+
 El resumen del enunciado es el siguiente:
 
 Consumir la mejor api rest de pruebas basada en [Rick and Morty (hazme click, se que quieres)](https://rickandmortyapi.com/) y cumplir con los siguientes desafíos:
@@ -15,7 +20,16 @@ Tienes que consultar todos los `character`, `locations` y `episodes` de la api e
     - para cada `episode`, indicar la cantidad y un listado con las `location` (`origin`) de todos los `character` que aparecieron en ese `episode` (sin repetir)
     - cuánto tardó el programa 👆 en total (desde inicio ejecución hasta entrega de resultados)
 
-Para leer el enunciado completo, te invito a dar click en el siguiente enlace: [Test.md](Test.md)
+Para leer el enunciado completo, te invito a dar click en el siguiente enlace: [Test.md](docs/Test.md)
+
+## Puesta en marcha
+```console
+    $ 
+```
+
+## Mejoras a implementar
+* Docker (Lo manejo, pero aun se me dificulta crear imagenes desde 0, no tengo en consideración todas las variables y conexiones que se necesitaran)
+* React (aprendiendo)
 
 ## Agradecimientos
 
