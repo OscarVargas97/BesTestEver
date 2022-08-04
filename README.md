@@ -3,7 +3,7 @@ Realmente considero que esta es una de las pruebas técnicas mas creativa e inte
 ## Enunciado
 El resumen del enunciado es el siguiente:
 
-Consumir la mejor api rest de pruebas basada en Rick and Morty ([a link](https://rickandmortyapi.com/)) y cumplir con los siguientes desafíos:
+Consumir la mejor api rest de pruebas basada en [Rick and Morty (hazme click, se que quieres)](https://rickandmortyapi.com/)) y cumplir con los siguientes desafíos:
 
 Tienes que consultar todos los `character`, `locations` y `episodes` de la api e indicar:
 1. Char counter:
@@ -15,7 +15,7 @@ Tienes que consultar todos los `character`, `locations` y `episodes` de la api e
     - para cada `episode`, indicar la cantidad y un listado con las `location` (`origin`) de todos los `character` que aparecieron en ese `episode` (sin repetir)
     - cuánto tardó el programa 👆 en total (desde inicio ejecución hasta entrega de resultados)
 
-Para leer el enunciado completo, te invito a dar click en el siguiente enlace: [a relative link](Test.md)
+Para leer el enunciado completo, te invito a dar click en el siguiente enlace: [Test.md](Test.md)
 
 ## Agradecimientos
 
