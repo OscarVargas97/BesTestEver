@@ -3,7 +3,7 @@ Realmente considero que esta es una de las pruebas técnicas mas creativa e inte
 ## Enunciado
 El resumen del enunciado es el siguiente:
 
-Consumir la mejor api rest de pruebas basada en [Rick and Morty (hazme click, se que quieres)](https://rickandmortyapi.com/)) y cumplir con los siguientes desafíos:
+Consumir la mejor api rest de pruebas basada en [Rick and Morty (hazme click, se que quieres)](https://rickandmortyapi.com/) y cumplir con los siguientes desafíos:
 
 Tienes que consultar todos los `character`, `locations` y `episodes` de la api e indicar:
 1. Char counter:
