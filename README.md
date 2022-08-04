@@ -2,6 +2,7 @@
 Realmente considero que esta es una de las pruebas técnicas mas creativa e interesante que he realizado, 
 ## Enunciado
 El resumen del enunciado es el siguiente:
+
 Consumir la mejor api rest de pruebas basada en Rick and Morty ([a link](https://rickandmortyapi.com/)) y cumplir con los siguientes desafíos:
 
 Tienes que consultar todos los `character`, `locations` y `episodes` de la api e indicar:
