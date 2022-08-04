@@ -1,6 +1,11 @@
 # BesTestEver
-Realmente considero que esta es una de las pruebas técnicas mas creativa e interesante que he realizado, 
+Realmente considero que esta es una de las pruebas técnicas mas creativa e interesante que he realizado.
+
+## Docs
+Puedes encontrar la documentación de la solución en [aquí](Test.md), en este enlace explico algunas decisiones de diseño y como mantener el orden en caso de querer implementar nuevas funcionalidades.
+
 ## Enunciado
+
 El resumen del enunciado es el siguiente:
 
 Consumir la mejor api rest de pruebas basada en [Rick and Morty (hazme click, se que quieres)](https://rickandmortyapi.com/) y cumplir con los siguientes desafíos:
