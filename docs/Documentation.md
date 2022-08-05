@@ -63,7 +63,10 @@ En el caso de querer agregar un nuevo controlador, este debe ir en la carpeta de
     NombreMuyDescriptivoComoNo.controller.js
 ``` 
 ### Agregar modelos
-
+En el caso de los modelos se aplica la misma lógica que los controladores, es importante mencionar que un modelo esta relacionado a solo 1 tipo de objeto.
+```
+    NombreMuyDescriptivoComoNo.model.js
+``` 
 ### Organización de las vistas
 En el caso de querer crear una nueva vista, para nuestro proyecto debemos agregar el código html, siguiendo un criterio tal que:
 
@@ -91,6 +94,6 @@ Es esencial que toda aquella información, tales como token, contraseñas o cred
 Esto con el fin no exponer la información sensible de nuestro sistemas.
 
 ## Base de datos
-Pienso continuar el proyecto con el fin de crear algo que mostrar en mi portafolios, por lo cual, actualmente no he construido la base de datos que quiero implementar para escalar.
+El motor de base de datos seleccionado es MongoDB. Esto es debido a la facilidad que entrega para trabajar y crear información, es una buena herramienta para proyectos pequeños y proyectos de alta demanda de query por segundo.
 ### Modelo Relacional
 ![Descripción de la imagen](https://memecreator.org/static/images/memes/5485764.jpg)
