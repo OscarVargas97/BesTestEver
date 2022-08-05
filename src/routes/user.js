@@ -1,9 +1,7 @@
 const express = require ('express');
 const router = express.Router();
-const controller = require('../controller/user.controller');
+const users = require('../controller/user.controller');
 
-router.get('*',(req, res) =>{
-    res.status(404).send('error!')
-});
-
+router.get('/',users.list);
+router.post('/',users.create);
 module.exports = router;

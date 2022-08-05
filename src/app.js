@@ -1,7 +1,6 @@
 const express = require ('express');
 const morgan = require('morgan');
-
-
+const db = require('./database')
 require('dotenv').config();
 
 // initializations
@@ -12,23 +11,12 @@ app.set('port', process.env.PORT || 4000);
 
 // Middleware
 app.use(morgan('dev'));
+app.use(express.json())
 
 // Routes
 app.use(require('./routes/index'));
-
-// Controller
-
-// Models
-
-// Public
 
 //Starting the Server
 app.listen(app.get('port'), ()=> {
     console.log('Server on port', app.get('port'))
 });
-
-//.connect({
-//  host: process.env.DB_HOST,
-//  username: process.env.DB_USER,
-//  password: process.env.DB_PASS
-//});

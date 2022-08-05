@@ -1,8 +1,7 @@
 const express = require ('express');
 const router = express.Router();
+const home = require('../controller/home.controller')
 
-//Here add all routes
-router.use('/',require('./home'))
-router.use('/user',require('./user'))
+router.get('/',home.home)
 
 module.exports = router;
