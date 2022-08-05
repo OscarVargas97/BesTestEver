@@ -1,17 +1,15 @@
-const User={
-    list:(req, res) => {
-        res.status(200).send('Hola Chanchito')
+const Users = require('../models/user.model');
+
+const User = {
+    list: async (req, res) => {
+        const users = await Users.find()
+        res.status(200).send(users)
     },
-    create:(req, res) => {
-        res.status(201).send('Creando un Chanchito')
-    },
-    update:(req, res) => {
-        res.status(204).send('Actualizando un Chanchito')
-    },
-    destroy:(req, res) => {
-        res.status(204).send('Eliminando un Chanchito')
-    },
-    
+    create: async (req,res) => {
+        const user = Users(req.body)
+        const saveUser = await user.save()
+        res.status(201).send(saveUser._id )
+    }
 }
 
 module.exports = User

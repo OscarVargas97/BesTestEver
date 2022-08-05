@@ -1,17 +1,9 @@
-const mongoose = require('../database')
-
+const mongoose = require('mongoose');
 //model
-const User = mongoose.model('User',{
-    username: String,
-    edad: Number
+
+const Users = mongoose.model('User',{
+    name: {type: String, required:true, minLenght:3},
+    lastname: {type: String, required:true, minLenght:3}
 });
 
-
-//Function
-const create = async (username, edad ) => {
-    const user = new User({ username:username, edad })
-    const saveUser = await user.save()
-    console.log(saveUser)
-}
-
-create()
+module.exports = Users

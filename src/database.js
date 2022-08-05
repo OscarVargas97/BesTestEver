@@ -1,11 +1,18 @@
-const connect = require('mongoose');
+require('dotenv').config();
 
+const db = require('mongoose')
 
-const uri = "mongodb+srv://" + url.QueryEscape(username) + ":" + 
-		url.QueryEscape(password) + "@" + cluster + 
-		"/?authSource=" + authSource +
-		"&authMechanism=" + authMechanism
-//connect.connect('mongodb+srv://'+ process.env.DB_USER +':<'+ process.env.DB_PASS + '>' + '@' + process.env.DB_HOST +'/' +process.env.APPNAME +'?retryWrites=true&w=majority');
-connect.connect(uri)
+const uri = 'mongodb+srv://' + 
+        process.env.DB_USER + 
+        ':' + 
+        process.env.DB_PASS + 
+        '@' + 
+        process.env.DB_HOST + 
+        '/'+ 
+        process.env.APPNAME +
+        '?retryWrites=true&w=majority';
 
-module.exports = connect;
+//mongoose.connect('mongodb+srv://oscar:mamilaura1@cluster0.j3ioftv.mongodb.net/bestestever?retryWrites=true&w=majority')
+db.connect(uri)
+
+module.exports = db;
