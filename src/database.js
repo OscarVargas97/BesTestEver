@@ -1,7 +1,6 @@
 require('dotenv').config();
 
 const db = require('mongoose')
-
 const uri = 'mongodb+srv://' + 
         process.env.DB_USER + 
         ':' + 

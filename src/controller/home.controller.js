@@ -1,9 +1,6 @@
-const Users = require('../models/user.model');
-
 const Home = {
-    home:(req, res) => {
-        res.status(200).send("tamo guchi")
+    home: (req, res) => {
+        res.sendFile(`/home/oscar/Repos/OscarVargas97/BesTestEver/src/views/home/index.html`)
     }
 }
-
 module.exports = Home
