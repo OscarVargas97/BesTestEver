@@ -10,7 +10,6 @@ const app = express();
 app.set('port', process.env.PORT || 4000);
 
 // Middleware
-app.use(express.static(`${__dirname}/static`));
 app.use(morgan('dev'));
 app.use(express.json());
 
