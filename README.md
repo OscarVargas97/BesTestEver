@@ -7,9 +7,9 @@ La respuesta al ejercicio esta implementada, pero ademas estoy usando el proyect
 En caso de no tener docker compose instalado dejo un enlace de la documentación oficial [aquí](https://docs.docker.com/compose/install/).
 
 ```console
-$ git clone https://github.com/OscarVargas97/BesTestEver.git
-$ cd BesTestEver
-$ docker compose up
+git clone https://github.com/OscarVargas97/BesTestEver.git
+cd BesTestEver
+docker compose up
 ```
 A continuación dirigirse a la dirección:
 
