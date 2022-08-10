@@ -17,7 +17,7 @@ A continuación dirigirse a la dirección:
 
 En caso de querer ver directamente el json con la información solicitada como respuesta, dirigirse a la siguiente url
 
-[https://localhost:4000](https://localhost:4000)
+[https://localhost:4000/respond](https://localhost:4000/respond)
 
 ## Enunciado.
 
