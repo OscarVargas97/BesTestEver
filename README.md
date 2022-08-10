@@ -2,7 +2,10 @@
 Realmente considero que esta es una de las pruebas técnicas mas creativa e interesante que he realizado.
 
 ## Docs
-Puedes encontrar la documentación de la solución [aquí](docs/Documentation.md), en este enlace explico algunas decisiones de diseño y como mantener el orden en caso de querer implementar nuevas funcionalidades.
+Al iniciar el proyecto decidí no tomármelo como una prueba técnica sino una oportunidad para aprender y aumentar mi stack de tecnologías, por lo cual realice el desarrollo de un front y un backend.
+La respuesta como tal se encuentra del lado del Front, el cual esta desarrollado con react y continuación dejo la documentación tanto del programa como de la realización del ejercicio.
+
+Por otro lado en este enlace dejo la documentación respectiva del backend, dale click [aquí](docs/Documentation.md), en este enlace explico algunas decisiones de diseño y como mantener el orden en caso de querer implementar nuevas funcionalidades en el backend.
 
 ## Enunciado
 
@@ -20,15 +23,17 @@ Tienes que consultar todos los `character`, `locations` y `episodes` de la api e
     - para cada `episode`, indicar la cantidad y un listado con las `location` (`origin`) de todos los `character` que aparecieron en ese `episode` (sin repetir)
     - cuánto tardó el programa 👆 en total (desde inicio ejecución hasta entrega de resultados)
 
-Para leer el enunciado completo, te invito a dar click en el siguiente enlace: [Test.md](docs/Test.md)
+Para leer el enunciado completo, te invito a dar click en el siguiente enlace: [Test.md](Test.md)
 
-## Puesta en marcha
+## Comandos para ver solo el front con la respuesta
 ```console
     $ 
 ```
 
+## Comandos para correr todo el proyecto
 ## Mejoras a implementar
-* Docker (Lo manejo, pero aun se me dificulta crear imagenes desde 0, no tengo en consideración todas las variables y conexiones que se necesitaran)
+* Docker (Lo manejo, pero aun se me dificulta crear imágenes desde 0, no tengo en consideración todas las variables y conexiones que se necesitaran)
+
 * React (aprendiendo)
 
 ## Agradecimientos
