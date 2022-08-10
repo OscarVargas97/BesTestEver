@@ -43,7 +43,7 @@ A continuación dejo los enlaces a la documentación de cada programa, en estos 
 - Aplicación Front-end [aquí](docs/Cliente.md)
 
 ## Features no considerados en la prueba técnica
-	* Sistema de autenticación de usuarios en react basándose en una api
+* Sistema de autenticación de usuarios en react basándose en una api
 
 ## Mejoras a implementar
 * Next.js
