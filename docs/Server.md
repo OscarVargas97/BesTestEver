@@ -44,14 +44,14 @@ La idea principal de este, es disminuir la carga de declaraciones en el app.js, 
 Este archivo se utilizara cada vez que deseamos integrar un nuevo conjunto de rutas a la aplicación, posteriormente al haber establecido el nuevo archivo, por ejemplo:
 
 ```
-    ejemplo.js
+ejemplo.js
 ```
 se debe realizar la inclusion de las nuevas rutas de la siguiente manera:
 
 ```javascript
-    ...
-    outer.use(require('./ejemplo.js'))
-    ...
+...
+router.use('/ejemplo',require('./ejemplo.js'))
+...
 ```
 Es importante mencionar que todas las rutas que agregamos, deben encontrarse en la carpeta routes.
 
@@ -60,12 +60,12 @@ Finalmente, index.js se encarga re recibir este archivo ya agregarlo al proyecto
 ### Agregar controladores
 En el caso de querer agregar un nuevo controlador, este debe ir en la carpeta de controladores y debe tener un nombre descriptivo, este debe contener el sufijo .controller por ejemplo:
 ```
-    NombreMuyDescriptivoComoNo.controller.js
+NombreMuyDescriptivoComoNo.controller.js
 ``` 
 ### Agregar modelos
 En el caso de los modelos se aplica la misma lógica que los controladores, es importante mencionar que un modelo esta relacionado a solo 1 tipo de objeto.
 ```
-    NombreMuyDescriptivoComoNo.model.js
+NombreMuyDescriptivoComoNo.model.js
 ``` 
 ### Organización de las vistas
 En el caso de querer crear una nueva vista, para nuestro proyecto debemos agregar el código html, siguiendo un criterio tal que:
@@ -89,7 +89,7 @@ Los archivos ccs, html e imágenes deben ir incluidos en su carpeta correspondie
 Las variables de entorno se manejaran desde un archivo .env, con el fin de evitar el exponer contenido sensible en el código fuente de nuestra aplicación. Se implemento el modulo dotenv, el cual se encarga de cargas las variables declaradas en el .env a las variables de entorno de nuestro sistema. 
 Es esencial que toda aquella información, tales como token, contraseñas o credenciales, se ingresen como variables de entorno y que posteriormente se consuman en la aplicación utilizando el comando: 
 ```javascript
-
+process.env.NombreVariableEntorno
 ```
 Esto con el fin no exponer la información sensible de nuestro sistemas.
 
