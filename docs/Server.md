@@ -95,5 +95,6 @@ Esto con el fin no exponer la información sensible de nuestro sistemas.
 
 ## Base de datos
 El motor de base de datos seleccionado es MongoDB. Esto es debido a la facilidad que entrega para trabajar y crear información, es una buena herramienta para proyectos pequeños y proyectos de alta demanda de query por segundo.
-### Modelo Relacional
+
+### Modelo Relacional (por los jajas)
 ![Descripción de la imagen](https://memecreator.org/static/images/memes/5485764.jpg)
