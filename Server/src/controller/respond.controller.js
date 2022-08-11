@@ -1,13 +1,12 @@
-const RickAndMorty = require("../services/Api/rickandmorty/getFromRickandMorty");
-
+const RickAndMorty = require("../services/Api/rickandmorty/apiQuery.services");
 
 const ApiRespond = {
 	query: async (req, res) => {
 		res.send(await RickAndMorty.getAllCharacter)
 	},
 	allName: async (req, res) => {
-		const pepe = await RickAndMorty.getResponseTest
-		res.send('hi')
+		res.send(await RickAndMorty.getResponseTest)
 	}
 }
+
 module.exports = ApiRespond;

@@ -1,18 +1,18 @@
 //Internal
-function count(obj, char) {
-	return obj.reduce((acc, item) => [...acc, ...item.name], [])
+function countByProp(obj, char, prop) {
+	return obj.reduce((acc, item) => [...acc, ...item[prop]], [])
 		.reduce((acc, item) => {
-			if (item === char) {
-				return acc += 1
-			}
-			return acc
+			return (
+				(item === char)
+					? acc += 1
+					: acc
+			)
 		}, 0)
-	//obj.reduce(acc, item => acc + item.name.  0);
 }
 
-function tryCount(obj, char) {
+function tryCount(obj, char, prop) {
 	try {
-		return count(obj, char);
+		return countByProp(obj, char, prop);
 	}
 	catch {
 
@@ -21,11 +21,11 @@ function tryCount(obj, char) {
 }
 
 //Export Region
-const countCharInObject = (obj = {}, char = '') => {
-	if (obj && char) {
-		return tryCount(obj, char);
-	}
-	return 0;
-}
-
-module.exports = countCharInObject;
+const CountCharInPropObject = (obj = {}, char = '', prop = '') => {
+	return (
+		(obj && char && prop)
+			? tryCount(obj, char, prop)
+			: 0
+	);
+};
+module.exports = CountCharInPropObject;
