@@ -17,8 +17,12 @@ A continuación dirigirse a la dirección:
 
 En caso de querer ver directamente el json con la información solicitada como respuesta, dirigirse a la siguiente url
 
-[https://localhost:4000/respond](https://localhost:4000/respond)
+[https://localhost:4000/respond/bestestever](https://localhost:4000/respond/bestestever)
 
+## Código relevantes para evaluar la respuesta
+Los scripts resumidos de la respuesta son los siguientes
+ /Client/
+ 
 ## Enunciado.
 
 El resumen del enunciado es el siguiente:
