@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const ApiRespond = require('../controller/respond.controller')
+const ApiRespond = require('../controllers/respond.controller')
 
 router.get('/', ApiRespond.query)
 router.get('/bestestever', ApiRespond.allName)
