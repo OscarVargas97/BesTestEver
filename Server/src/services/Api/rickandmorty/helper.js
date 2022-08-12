@@ -45,10 +45,12 @@ async function exercise(exerciseName, funcResult) {
 	return createJson(exerciseName, array, time)
 };
 
+
+//export modules
 async function ResponseTest() {
 	return [
 		await exercise("Char counter", resultFirst),
-		await exercise("Char counter", resultSecond)
+		await exercise("Episode locations", resultSecond)
 	];
 };
 

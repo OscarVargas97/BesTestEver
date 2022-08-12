@@ -1,15 +1,15 @@
-# BesTestEver.
+# BesTestEver
 Si bien este proyecto es la respuesta a la prueba técnica establecida por Chipax, decidí tomármelo como una oportunidad para aprender nuevas tecnologías.
-Este proyecto consta de dos programas, los cuales representan a un back-end y un front-end, si bien tenia nociones básicas de node.js nunca había utilizado React.js para el desarrollo de una aplicación, por lo cual me puse como reto personal el desarrollar toda una solución full-stack dockerizada.
-La respuesta al ejercicio esta implementada, pero ademas estoy usando el proyecto para probar e implementar aquellas cosas que voy aprendiendo.
+Este proyecto consta de dos programas, los cuales representan a un back-end y un front-end, si bien tenía nociones básicas de node.js nunca había utilizado React.js para el desarrollo de una aplicación, por lo cual me puse como reto personal el desarrollar toda una solución full-stack dockerizada.
+La respuesta al ejercicio está implementada, pero además estoy usando el proyecto para probar e implementar aquellas cosas que voy aprendiendo.
 
-## Comandos de ejecución.
+## Comandos de ejecución
 En caso de no tener docker compose instalado dejo un enlace de la documentación oficial [aquí](https://docs.docker.com/compose/install/).
 
 ```console
 git clone https://github.com/OscarVargas97/BesTestEver.git
 cd BesTestEver
-docker compose up
+docker-compose up
 ```
 A continuación dirigirse a la dirección:
 
@@ -20,10 +20,10 @@ En caso de querer ver directamente el json con la información solicitada como r
 [https://localhost:4000/respond/bestestever](https://localhost:4000/respond/bestestever)
 
 ## Código relevantes para evaluar la respuesta
-Los scripts resumidos de la respuesta son los siguientes
- /Client/
- 
-## Enunciado.
+Los scripts con la lógica de las solicitudes para cumplir el la prueba.
+	Server/services/api/rickandmorty/*
+	Server/helpers/*
+## Enunciado
 
 El resumen del enunciado es el siguiente:
 
@@ -41,16 +41,14 @@ Tienes que consultar todos los `character`, `locations` y `episodes` de la api e
 
 Para leer el enunciado completo, te invito a dar click en el siguiente enlace: [Test.md](docs/Test.md)
 
-## Docs.
+## Docs
 A continuación dejo los enlaces a la documentación de cada programa, en estos detallo las decisiones de diseño junto a la distribución de carpetas establecidas:
 - Aplicación back-end  [aquí](docs/Server.md)
 - Aplicación Front-end [aquí](docs/Cliente.md)
 
-## Features no considerados en la prueba técnica
-* Sistema de autenticación de usuarios en react basándose en una api
-
-## Mejoras a implementar
-* Next.js
+## Mejoras a implementando
+* Next.js ()
+* Sistema de autenticación de usuarios en react basándose en una api 
 
 ## Formulario recomendaciones
 A continuación dejare un formulario de google, este formulario tiene la finalidad de entregarme feedback respecto a la codificación y documentación.
