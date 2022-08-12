@@ -3,7 +3,7 @@ function countByProp (obj, char, prop) {
   return obj.reduce((acc, item) => [...acc, ...item[prop]], [])
     .reduce((acc, item) => {
       return ((item === char)
-        ? acc += 1
+        ? (acc += 1)
         : acc
       )
     }
