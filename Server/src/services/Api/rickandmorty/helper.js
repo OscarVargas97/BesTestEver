@@ -18,7 +18,7 @@ async function resultFirst () {
 }
 
 async function resultSecond () {
-  return (await GetAllFromApi('character')).map(item => {
+  return [1, 2, 3].map(item => {
     return ({
       name: '',
       episode: '',
@@ -53,7 +53,7 @@ async function ResponseTest () {
 }
 
 async function GetAllFromApi (value) {
-  return await Query('https://rickandmortyapi.com/api/', value)
+  return await Query('https://rickandmortyapi.com/api/' + String(value))
 }
 
 module.exports.ResponseTest = ResponseTest
