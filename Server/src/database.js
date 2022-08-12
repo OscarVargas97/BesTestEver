@@ -1,6 +1,6 @@
 require('dotenv').config();
 
-const db = require('mongoose')
+const db = require('mongoose');
 const uri = 'mongodb+srv://' +
 	process.env.DB_USER +
 	':' +
@@ -12,6 +12,6 @@ const uri = 'mongodb+srv://' +
 	'?retryWrites=true&w=majority';
 
 //mongoose.connect('mongodb+srv://oscar:mamilaura1@cluster0.j3ioftv.mongodb.net/bestestever?retryWrites=true&w=majority')
-db.connect(uri)
+db.connect(uri);
 
 module.exports = db;
