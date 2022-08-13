@@ -1,6 +1,6 @@
 const Home = {
   home: (req, res) => {
-    res.status('403').send('hi')
+    res.status('403').send('Welcome')
   }
 }
 module.exports = Home

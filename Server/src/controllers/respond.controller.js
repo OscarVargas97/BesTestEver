@@ -1,4 +1,4 @@
-const RickAndMorty = require('../services/Api/rickandmorty/api_query.services')
+const RickAndMorty = require('../services/Api/rickandmorty/rickandmorty.services')
 
 const ApiRespond = {
   query: async (req, res) => {
