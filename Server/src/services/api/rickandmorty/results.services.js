@@ -1,6 +1,6 @@
 const CreateJson = require('./createjson.services')
 const CountCharInPropObject = require('../../general/count.services')
-const GetLocationForCharacter = require('./getlocationcorcharacter.service')
+const GetLocationForCharacter = require('./getlocationcorcharacter.services')
 
 async function ResultFirst (arrayinfo) {
   const funcresults = (resultquery, arrayinfo) => {
