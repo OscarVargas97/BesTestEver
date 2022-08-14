@@ -1,38 +1,43 @@
 {
-  "name": "bestestever",
-  "version": "1.0.0",
-  "description": "Realmente considero que esta es una de las pruebas técnicas mas creativa e interesante que he realizado,  ## Enunciado El resumen del enunciado es el siguiente:",
-  "main": "app.js",
-  "scripts": {
-    "dev": "nodemon src/app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/OscarVargas97/BesTestEver.git"
-  },
-  "keywords": [],
-  "author": "OscarVargas97",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/OscarVargas97/BesTestEver/issues"
-  },
-  "homepage": "https://github.com/OscarVargas97/BesTestEver#readme",
-  "dependencies": {
-    "bcryptjs": "^2.4.3",
-    "connect-flash": "^0.1.1",
-    "dotenv": "^16.0.1",
-    "express": "^4.18.1",
-    "express-handlebars": "^6.0.6",
-    "express-session": "^1.17.3",
-    "express-validator": "^6.14.2",
-    "mongoose": "^6.5.1",
-    "morgan": "^1.10.0",
-    "passport": "^0.6.0",
-    "passport-local": "^1.0.0",
-    "timeago.js": "^4.0.2"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.19"
-  }
+	"name": "bestestever",
+	"version": "1.0.0",
+	"description": "Realmente considero que esta es una de las pruebas técnicas mas creativa e interesante que he realizado,  ## Enunciado El resumen del enunciado es el siguiente:",
+	"main": "app.js",
+	"scripts": {
+		"dev": "nodemon src/app.js",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/OscarVargas97/BesTestEver.git"
+	},
+	"keywords": [],
+	"author": "OscarVargas97",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/OscarVargas97/BesTestEver/issues"
+	},
+	"homepage": "https://github.com/OscarVargas97/BesTestEver#readme",
+	"dependencies": {
+		"bcryptjs": "^2.4.3",
+		"connect-flash": "^0.1.1",
+		"dotenv": "^16.0.1",
+		"express": "^4.18.1",
+		"express-handlebars": "^6.0.6",
+		"express-session": "^1.17.3",
+		"express-validator": "^6.14.2",
+		"mongoose": "^6.5.1",
+		"morgan": "^1.10.0",
+		"node-fetch": "^2.6.7",
+		"passport": "^0.6.0",
+		"passport-local": "^1.0.0",
+		"timeago.js": "^4.0.2"
+	},
+	"devDependencies": {
+		"nodemon": "^2.0.19",
+		"standard": "17.0.0"
+	},
+	"eslintConfig": {
+		"extends": "./node_modules/standard/eslintrc.json"
+	}
 }

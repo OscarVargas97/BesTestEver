@@ -1,22 +1,22 @@
-const express = require('express');
-const morgan = require('morgan');
-const db = require('./database')
-require('dotenv').config();
+const express = require('express')
+const morgan = require('morgan')
+require('./database')
+require('dotenv').config()
 
 // initializations
-const app = express();
+const app = express()
 
 // settings
-app.set('port', process.env.PORT || 4000);
+app.set('port', process.env.PORT || 4000)
 
 // Middleware
-app.use(morgan('dev'));
-app.use(express.json());
+app.use(morgan('dev'))
+app.use(express.json())
 
 // Routes
-app.use(require('./routes/index'));
+app.use(require('./routes/index'))
 
-//Starting the Server
+// Starting the Server
 app.listen(app.get('port'), () => {
-    console.log('Server on port', app.get('port'));
-});
+  console.log('Server on port', app.get('port'))
+})

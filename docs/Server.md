@@ -10,7 +10,7 @@ Personalmente me gusta iniciar un proyecto considerando que no se debe "matar a 
 Para organizar el proyecto se decidió por seguir el modelo Model-View-Controller, por lo cual los directorios se organiza de la siguiente manera:
 
 * src (Carpeta donde se encuentra el código de la aplicación)
-    * controller (Carpeta donde ira la lógica a implementar en nuestras rutas y gestionar las vistas)
+    * controllers (Carpeta donde ira la lógica a implementar en nuestras rutas y gestionar las vistas)
         * user.controller.js
         ...
     * models (Carpeta donde se declarara la abstracción de los modelos de la base de datos)

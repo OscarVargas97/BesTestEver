@@ -1,10 +1,11 @@
-const express = require('express');
-const router = express.Router();
+const express = require('express')
+const router = express.Router()
 
-//Here add all routes
-router.use('/', require('./errors'))
-router.use('/', require('./home'))
+// Here add all routes
+
 router.use('/user', require('./user'))
-router.use('/respond', require('./respond'))
+router.use('/api/', require('./rickandmorty'))
 
-module.exports = router;
+router.use('/', require('./errors'))
+
+module.exports = router
