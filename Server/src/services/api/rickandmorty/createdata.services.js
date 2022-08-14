@@ -1,8 +1,8 @@
-const GetAllFromApi = require('../../query/getallfromapi.services')
+const GetAllFromApi = require('../query/getallfromapi.services')
 
 async function CreateData (infoarray, funcresult) {
   let gettime = performance.now()
-  const array = await funcresult(await GetAllFromApi(infoarray))
+  const array = funcresult(await GetAllFromApi(infoarray), infoarray)
   gettime = performance.now() - gettime
   return ([
     gettime,

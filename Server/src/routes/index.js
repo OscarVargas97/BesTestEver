@@ -3,9 +3,8 @@ const router = express.Router()
 
 // Here add all routes
 
-router.use('/', require('./home'))
 router.use('/user', require('./user'))
-router.use('/api/', require('./respond'))
+router.use('/api/', require('./rickandmorty'))
 
 router.use('/', require('./errors'))
 

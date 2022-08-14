@@ -1,8 +1,8 @@
 const ConvertToSeconds = require('../../general/timer_convert.services')
 const CreateData = require('./createdata.services')
 
-function CreateJson (exerciseName, arrayinfo, funcresults) {
-  const [time, array] = CreateData(arrayinfo, funcresults)
+async function CreateJson (exerciseName, arrayinfo, funcresults) {
+  const [time, array] = await CreateData(arrayinfo, funcresults)
   return {
     exercise_name: exerciseName,
     time: ConvertToSeconds(time),

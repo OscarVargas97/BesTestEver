@@ -1,4 +1,4 @@
-const { ResponseTest } = require('../services/Api/rickandmorty/respondtest.services')
+const { ResponseTest } = require('../services/api/rickandmorty/respondtest.services')
 
 const RickandMorty = {
 

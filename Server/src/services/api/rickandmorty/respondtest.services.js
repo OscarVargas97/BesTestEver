@@ -7,12 +7,12 @@ const infoarray = [
     char: 'c'
   },
   {
-    type: 'location',
+    resource: 'location',
     query: 'https://rickandmortyapi.com/api/location',
     char: 'l'
   },
   {
-    type: 'episode',
+    resource: 'episode',
     query: 'https://rickandmortyapi.com/api/episode',
     char: 'e'
   }

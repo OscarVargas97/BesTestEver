@@ -2,15 +2,17 @@ const CreateJson = require('./createjson.services')
 const CountCharInPropObject = require('../../general/count.services')
 
 async function ResultFirst (arrayinfo) {
-  const funcresults = (resultquery) => {
-    resultquery
-      .map((item) => {
-        return ({
+  const funcresults = (resultquery, arrayinfo) => {
+    return arrayinfo
+      .map(item => {
+        return {
           char: item.char,
-          count: CountCharInPropObject(item.results),
+          count: CountCharInPropObject(resultquery[item.resource], item.char, 'name'),
           resource: item.resource
-        })
-      })
+
+        }
+      }
+      )
   }
   return CreateJson(
     'Char counter',
