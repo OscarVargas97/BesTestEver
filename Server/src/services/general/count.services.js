@@ -1,30 +1,19 @@
-// Internal
-function countByProp (obj, char, prop) {
-  return obj.reduce((acc, item) => [...acc, ...item[prop]], [])
-    .reduce((acc, item) => {
-      return ((item === char)
-        ? (acc += 1)
-        : acc
-      )
-    }
-    , 0)
-}
-
-function tryCount (obj, char, prop) {
-  try {
-    return countByProp(obj, char, prop)
-  } catch {
-
-  }
-  return 0
+const Validation = (obj, char, prop) => {
+  return true
 }
 
 // Export Region
 const CountCharInPropObject = (obj = {}, char = '', prop = '') => {
-  return (
-    (obj && char && prop)
-      ? tryCount(obj, char, prop)
-      : 0
-  )
+  if (Validation) {
+    return obj.reduce((acc, item) => [...acc, ...item[prop]], [])
+      .reduce((acc, item) => {
+        return ((item === char)
+          ? (acc += 1)
+          : acc
+        )
+      }
+      , 0)
+  }
+  return false
 }
 module.exports = CountCharInPropObject

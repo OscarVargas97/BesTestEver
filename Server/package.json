@@ -5,7 +5,9 @@
 	"main": "app.js",
 	"scripts": {
 		"dev": "nodemon src/app.js",
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"lint": "npm run lint",
+		"start": "node app.js",
+		"test": "jest --verbose"
 	},
 	"repository": {
 		"type": "git",
@@ -38,6 +40,12 @@
 		"standard": "17.0.0"
 	},
 	"eslintConfig": {
-		"extends": "./node_modules/standard/eslintrc.json"
+		"extends": "./node_modules/standard/eslintrc.json",
+		"env": {
+			"jest": true
+		}
+	},
+	"jest": {
+		"testEnvironment": "node"
 	}
 }
