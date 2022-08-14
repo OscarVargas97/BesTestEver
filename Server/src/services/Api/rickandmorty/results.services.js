@@ -1,29 +1,33 @@
+const CreateJson = require('./createjson.services')
 const CountCharInPropObject = require('../../general/count.services')
-async function ResultFirst (alldata, typequeryarray) {
-  const data = typequeryarray.map((item, i) => {
-    return [item, CountCharInPropObject(alldata[i], item, 'name')]
-  })// hay que modificar get all for api
-  return (
-    data
+
+async function ResultFirst (arrayinfo) {
+  const funcresults = (resultquery) => {
+    resultquery
       .map((item) => {
         return ({
-          char: item[0].substring(0, 1),
-          count: item[1],
-          resource: item[0]
+          char: item.char,
+          count: CountCharInPropObject(item.results),
+          resource: item.resource
         })
       })
+  }
+  return CreateJson(
+    'Char counter',
+    arrayinfo,
+    funcresults
   )
 }
 
-async function ResultSecond (alldata) {
-  const result = alldata
-  return result.map(item => {
-    return ({
-      name: '',
-      episode: '',
-      locations: ''
-    })
-  })
+async function ResultSecond (arrayinfo) {
+  const funcresults = (resultquery) => {
+    return 'hi'
+  }
+  return CreateJson(
+    'Episode locations',
+    arrayinfo,
+    funcresults
+  )
 }
 
 module.exports = {

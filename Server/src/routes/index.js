@@ -5,7 +5,7 @@ const router = express.Router()
 
 router.use('/', require('./home'))
 router.use('/user', require('./user'))
-router.use('/respond', require('./respond'))
+router.use('/api/', require('./respond'))
 
 router.use('/', require('./errors'))
 

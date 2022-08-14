@@ -11,20 +11,25 @@ const resolveArrayPromise = async (array) => {
   )
 }
 
-const AllPromiseResult = async (typearray,arrayquery, arraypages) => {
+const AllPromiseResult = async (typearray, arrayquery, arraypages) => {
   maxiteration = arraypages / 35
-	i = 0
-	//Quiero crear un objeto con las keys del typearray
-	while(i<maxiteration){
-
-	}
-
-  const (totalpages >= 35)
+  i = 0
+  // Quiero crear un objeto con las keys del typearray
+  while (i < maxiteration) {
+		const (totalpages >= 35)
     ? [...(await resolveArrayPromise(array.splice(0, array.length / 2))),
         ...(await resolveArrayPromise(array.splice(Math.length / 2)))]
     : (await resolveArrayPromise(array))
-
-  return [[], [], []]
+  }
+  return [
+    {
+      resource: 'character',
+      query: 'https://rickandmortyapi.com/api/character',
+      char: 'c',
+      result: [],
+			pages:''
+    }
+  ]
 }
 
 module.exports = {

@@ -1,14 +1,8 @@
-const { AllPromiseResult } = require('./allPromiseResult.services')
-const { GetPagesAllFromArray, CreateObjQuery, ArrayQuery } = require('./transform.services')
+const AllPromiseResult = require('./allPromiseResult.services')
+const ArrayQuery = require('./getpagesallfromarray')
 
-async function GetAllFromApi (uri, arraytype) {
-  const arrayuri = CreateObjQuery(uri, arraytype)
-  return AllPromiseResult(
-    ArrayQuery(
-      arrayuri,
-      await GetPagesAllFromArray(arrayuri)
-    )
-  )
+function GetAllFromApi (arrayinfo) {
+  return AllPromiseResult(ArrayQuery(arrayinfo))
 }
 
 module.exports = GetAllFromApi

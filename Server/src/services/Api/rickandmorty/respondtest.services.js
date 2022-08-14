@@ -1,24 +1,28 @@
-const GetAllFromApi = require('../../query/getallfromapi.services')
-const CreateJson = require('./createjson.services')
 const { ResultFirst, ResultSecond } = require('./results.services')
 
-const Uri = 'https://rickandmortyapi.com/api/'
-const TypeQueryArray = ['character', 'location', 'episode']
-
-async function exercise (exercisename, funcresult) {
-  let time = performance.now()
-  const alldata = await GetAllFromApi(Uri, TypeQueryArray)
-  const array = await funcresult(alldata, TypeQueryArray)
-  time = performance.now() - time
-
-  return CreateJson(exercisename, array, time)
-}
+const infoarray = [
+  {
+    resource: 'character',
+    query: 'https://rickandmortyapi.com/api/character',
+    char: 'c'
+  },
+  {
+    type: 'location',
+    query: 'https://rickandmortyapi.com/api/location',
+    char: 'l'
+  },
+  {
+    type: 'episode',
+    query: 'https://rickandmortyapi.com/api/episode',
+    char: 'e'
+  }
+]
 
 // export modules
-async function ResponseTest () {
+const ResponseTest = async () => {
   return [
-    await exercise('Char counter', ResultFirst),
-    await exercise('Episode locations', ResultSecond)
+    await ResultFirst(infoarray),
+    await ResultSecond(infoarray)
   ]
 }
 
