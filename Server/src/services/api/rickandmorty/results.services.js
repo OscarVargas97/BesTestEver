@@ -1,5 +1,6 @@
 const CreateJson = require('./createjson.services')
 const CountCharInPropObject = require('../../general/count.services')
+const GetLocationForCharacter = require('./getlocationcorcharacter.service')
 
 async function ResultFirst (arrayinfo) {
   const funcresults = (resultquery, arrayinfo) => {
@@ -9,11 +10,11 @@ async function ResultFirst (arrayinfo) {
           char: item.char,
           count: CountCharInPropObject(resultquery[item.resource], item.char, 'name'),
           resource: item.resource
-
         }
       }
       )
   }
+
   return CreateJson(
     'Char counter',
     arrayinfo,
@@ -23,8 +24,15 @@ async function ResultFirst (arrayinfo) {
 
 async function ResultSecond (arrayinfo) {
   const funcresults = (resultquery) => {
-    return 'hi'
+    return resultquery.episode.map(item => {
+      return {
+        name: item.name,
+        episode: item.episode,
+        locations: GetLocationForCharacter(item.characters, resultquery.character)
+      }
+    })
   }
+
   return CreateJson(
     'Episode locations',
     arrayinfo,
