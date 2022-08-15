@@ -1,20 +1,28 @@
 const fetch = require('node-fetch')
 
-const GetPagesAllFromArray = async (arrayinfo) => {
-  return await Promise.all(
-    arrayinfo
-      .map(async item => {
-        return ({
-          page: await fetch(item.query)
-            .then((respond) => respond.json())
-            .then(json => json.info.pages),
-          ...item
+const GetPagesAllFromArray = async (arrayinfo = []) => {
+  if (
+    arrayinfo.every((currentValue) => typeof (currentValue) !== 'object')
+  ) { return false }
+  try {
+    return await Promise.all(
+      arrayinfo
+        .map(async item => {
+          return ({
+            page: await fetch(item.query)
+              .then((respond) => respond.json())
+              .then(json => json.info.pages),
+            ...item
+          })
         })
-      })
-  )
+    )
+  } catch {
+    return false
+  }
 }
 
 const ArrayQuery = (theuri, page, theresource) => {
+  if (!theuri || !page || !theresource || typeof (page) !== 'number' || typeof (theuri) !== 'string' || typeof (theresource) !== 'string') { return false }
   return Array(page).fill('').map((item, i) => {
     return ({
       uri: (theuri + '?page=' + (i + 1)),
@@ -23,15 +31,21 @@ const ArrayQuery = (theuri, page, theresource) => {
   })
 }
 
-const CreateArrayQuery = async (arrayinfo) => {
-  return (await GetPagesAllFromArray(arrayinfo))
-    .map(item => {
-      return {
-        resource: item.resource,
-        char: item.char,
-        arrayQuery: ArrayQuery(item.query, item.page, item.resource)
-      }
-    })
+async function CreateArrayQuery (arrayinfo) {
+  try {
+    return (await GetPagesAllFromArray(arrayinfo))
+      .reduce((acc, item) => {
+        return [
+          ...acc,
+          ...ArrayQuery(item.query, item.page, item.resource)]
+      }, [])
+  } catch {
+    return false
+  }
 }
 
-module.exports = CreateArrayQuery
+module.exports = {
+  CreateArrayQuery,
+  ArrayQuery,
+  GetPagesAllFromArray
+}

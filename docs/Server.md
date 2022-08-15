@@ -28,6 +28,8 @@ Para organizar el proyecto se decidió por seguir la arquitectura Model-View-Con
 				*query (Carpeta que contiene la lógica de las consultas de manera general, para cualquier api)
 				*rickandmorty (lógica relacionada al manejo de la api Rick and Morty)
 			*general (lógica de uso común entre distintos servicios)
+		
+		* test (En esta carpeta encontraras las pruebas unitarias de cada script)
 
 ## Archivos relevantes y consideraciones
 Dentro de la declaración realizada anteriormente, es necesario resaltar algunos archivos, para entender como es que se debe agregar, por ejemplo, nuevos modelos, controladores, vistas o rutas.

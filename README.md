@@ -2,8 +2,6 @@
 Si bien este proyecto es la respuesta a la prueba técnica establecida por Chipax, decidí tomármelo como una oportunidad para aprender nuevas tecnologías, por lo cual si se redirigen a la rama de develop, encontraran el contenido en el que estoy trabajando para utilizar este repositorio como ambiente de aprendizaje.
 En la rama main, encontraran solo el contenido necesario para responder la prueba solicitada, para lo cual se decidió establecer una solución basada en node.js, este proyecto se encuentra dockerizado, con el objetivo de evitar problemas de contexto o incompatibilidades.
 
-Siendo honesto, la parte donde menos seguridad tengo es respecto a los test unitarios, debido a mi falta de experiencia con estos, esto lo menciono con el fin de que me puedan entregar feedback sobre este punto y recomendaciones de mejora, al final de este README.md encontraran un formulario para entregar feedback, estaría encantado de que lo rellenaran.
-
 ## Comandos de ejecución
 Puesta en marcha con dockers:
 * En caso de no tener docker compose instalado dejo un enlace de la documentación oficial [aquí](https://docs.docker.com/compose/install/).
@@ -24,6 +22,11 @@ node src/app.js
 
 Ahora hay que dirigirse a:
 [http://localhost:3000/api/answers](http://localhost:3000/api/answers)
+
+Para la ejecución de los test una vez ya descargado el proyecto y encontrándose en la carpeta del mismo, se debe ejecutar en consola los siguientes comandos:
+```console
+npm run test
+```
 
 ## Enunciado
 
@@ -47,6 +50,7 @@ Para leer el enunciado completo, te invito a dar click en el siguiente enlace: [
 
 Hay una incoherencia en la solicitud de la pregunta 2 con el output solicitado, mientras que el enunciado solicita indicar la cantidad, en el output no se observa ninguna key relacionada a cantidad, por esto, decidí no incluir una key de cantidad. De todas maneras no es complejo obtener la cantidad de localizaciones, solo se debe aplicar un .length al array de resultados.
 
+Debido a que me encuentro aprendiendo sobre pruebas unitarias y de integración, no logre realizar testing sobre todos los métodos. Ademas me centre mayormente en la validación de parámetros y excepciones.
 ## Docs
 - Aplicación back-end  [aquí](docs/Server.md)
 

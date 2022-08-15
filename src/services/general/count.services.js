@@ -1,10 +1,7 @@
-const Validation = (obj, char, prop) => {
-  return true
-}
-
 // Export Region
 const CountCharInPropObject = (obj = {}, char = '', prop = '') => {
-  if (Validation) {
+  if (!obj || !char || !prop) { return false }
+  try {
     return obj.reduce((acc, item) => [...acc, ...item[prop]], [])
       .reduce((acc, item) => {
         return ((item === char)
@@ -13,7 +10,8 @@ const CountCharInPropObject = (obj = {}, char = '', prop = '') => {
         )
       }
       , 0)
+  } catch {
+    return false
   }
-  return false
 }
 module.exports = CountCharInPropObject
