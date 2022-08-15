@@ -1,6 +1,5 @@
 const express = require('express')
 const morgan = require('morgan')
-require('./database')
 require('dotenv').config()
 
 // initializations

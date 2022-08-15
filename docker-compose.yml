@@ -1,17 +1,5 @@
 version: '3.8'
 services:
-  React:
-    build:
-      context: ./
-      dockerfile: Dockerfile.react
-    image: "react"
-    depends_on:
-      - Nodejs
-    ports:
-      - target: 3000
-        published: ${DD_PORT:-3000}
-        protocol: tcp
-        mode: host
   Nodejs:
     build:
       context: ./
@@ -19,6 +7,6 @@ services:
     image: "nodejs"
     ports:
       - target: 3000
-        published: ${DD_PORT:-4000}
+        published: ${DD_PORT:-3000}
         protocol: tcp
         mode: host

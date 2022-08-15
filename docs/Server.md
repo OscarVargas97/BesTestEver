@@ -2,33 +2,35 @@
 A continuación explicare algunas decisiones de diseño y como mantener el código de manera ordenada, por favor si desea ingresar nuevo código mantener el patron de diseño establecido.
 
 ## MVC
-Si bien, la solicitud del enunciado se podría realizar sin establecer un patron de arquitectura, siempre es bueno aprovechar para practicar conceptos y agregar nuevos proyectos al portafolio (jiji).
+Si bien, la solicitud del enunciado se podría realizar sin establecer un patron de arquitectura, siempre es bueno aprovechar para practicar conceptos.
 
 Personalmente me gusta iniciar un proyecto considerando que no se debe "matar a una mosca con una bazuca", pero por otro lado, también creo que las soluciones que debemos crear siempre deben estar orientadas a ser legibles y escalables. Por lo cual, no esta demás implementar un modelo que permita organizar y disminuir la carga cognitiva por scripts, ademas de facilitar a aquellos que desean leer el código.
 
 ## Directorios
-Para organizar el proyecto se decidió por seguir el modelo Model-View-Controller, por lo cual los directorios se organiza de la siguiente manera:
+Para organizar el proyecto se decidió por seguir la arquitectura Model-View-Controller, por lo cual los directorios se organiza de la siguiente manera:
 
 * src (Carpeta donde se encuentra el código de la aplicación)
-    * controllers (Carpeta donde ira la lógica a implementar en nuestras rutas y gestionar las vistas)
-        * user.controller.js
-        ...
+    * controllers (Carpeta donde Iran los scripts encargados de administrar la lógica del negocio )
+      * rickandmorty.controller.js
+      ...
+
     * models (Carpeta donde se declarara la abstracción de los modelos de la base de datos)
-        * user.model.js
-        ...
+			Debido a que en main se decidió retirar el contenido no relacionado a la entrega de la prueba, esta carpeta se encuentra vacía.
+      ...
+
     * routes (Carpeta donde se indicaran las distintas direcciones http y sus llamados a controladores)
-        * index.js
-        * user.js
-        ...
-    * Static (Carpeta donde estará el contenido estático, tales como imágenes, javascript y css)
-    * views (Carpeta donde estará el código de html de nuestros )
-        * home 
-        * layout
-        * partial
-            
+      * index.js
+      * errors.js
+			* rickandmorty.js
+
+    * services (Carpeta donde se encuentra la lógica de negocio)
+			*api (En esta carpeta se encuentra la logia de negocios relacionada a apis externas)
+				*query (Carpeta que contiene la lógica de las consultas de manera general, para cualquier api)
+				*rickandmorty (lógica relacionada al manejo de la api Rick and Morty)
+			*general (lógica de uso común entre distintos servicios)
 
 ## Archivos relevantes y consideraciones
-Dentro de la declaración realizada anteriormente, es necesario resaltar algunos archivos, para entender como es que se debe agregar por ejemplo, nuevos modelos, controladores, vistas o rutas.
+Dentro de la declaración realizada anteriormente, es necesario resaltar algunos archivos, para entender como es que se debe agregar, por ejemplo, nuevos modelos, controladores, vistas o rutas.
 En los siguientes apartados se abordara los puntos mencionados anteriormente.
 
 ### app.js
@@ -67,23 +69,12 @@ En el caso de los modelos se aplica la misma lógica que los controladores, es i
 ```
 NombreMuyDescriptivoComoNo.model.js
 ``` 
-### Organización de las vistas
-En el caso de querer crear una nueva vista, para nuestro proyecto debemos agregar el código html, siguiendo un criterio tal que:
+### Agregar services
+Si deseas ingresar nueva lógica de negocio, ya sea una nueva integración de api o bien la lógica que utilizara un controlador, esta debe ir en la carpeta services bajo la siguiente nomenclatura:
 
-Aquellos archivos que correspondan al o bienvenida de nuestro sistema, deben ir en la carpeta home.
-
-Todo contenido Html del Layout en la carpeta Layout.
-
-Todo Contenido parcial en la carpeta parcial.
-
-El resto de contenido......
-El resto de contenido......
-...
-...
-Sigo pensando en ello jiji :D
-
-### Contenido estático
-Los archivos ccs, html e imágenes deben ir incluidos en su carpeta correspondiente dentro de la carpeta Static.
+```
+NombreMuyDescriptivoComoNo.services.js
+``` 
 
 ## Variables de entorno
 Las variables de entorno se manejaran desde un archivo .env, con el fin de evitar el exponer contenido sensible en el código fuente de nuestra aplicación. Se implemento el modulo dotenv, el cual se encarga de cargas las variables declaradas en el .env a las variables de entorno de nuestro sistema. 
@@ -94,7 +85,7 @@ process.env.NombreVariableEntorno
 Esto con el fin no exponer la información sensible de nuestro sistemas.
 
 ## Base de datos
-El motor de base de datos seleccionado es MongoDB. Esto es debido a la facilidad que entrega para trabajar y crear información, es una buena herramienta para proyectos pequeños y proyectos de alta demanda de query por segundo.
+Inicialmente se estableció una base de datos no relacional con MongoDB, pero con el fin de simplificar la puesta en marcha de la aplicación para su evaluación, se eliminaron los archivos relacionados en la rama main, puede leer esta sección en el README.md de develop.
 
-### Modelo Relacional (por los jajas)
+### Modelo Relacional
 ![Descripción de la imagen](https://memecreator.org/static/images/memes/5485764.jpg)
