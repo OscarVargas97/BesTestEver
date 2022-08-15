@@ -17,6 +17,24 @@ describe('CreateArrayQuery', () => {
 
     expect(result).toBe(false)
   })
+
+  test('correct parameter', async () => {
+    const result = await CreateArrayQuery({ query: 'uri', page: 2, resource: 'hi' })
+
+    expect(result).toBe(false)
+  })
+  test('correct parameter', async () => {
+    const result = await CreateArrayQuery({
+      query: 'https:// rickandmortyapi.com/api/location',
+      page: 2,
+      resource: 'location'
+    })
+
+    expect(result).toBe([
+      { resource: 'hi', uri: 'uri?page=1' },
+      { resource: 'hi', uri: 'uri?page=2' }
+    ])
+  })
 })
 
 describe('GetPagesAllFromArray', () => {

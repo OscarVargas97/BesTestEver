@@ -1,8 +1,10 @@
 const ConvertToSeconds = require('../../general/timer_convert.services')
-const CreateData = require('./createdata.services')
+const GetAllFromApi = require('../query/getallfromapi.services')
 
 async function CreateJson (exerciseName, arrayinfo, funcresults) {
-  const [time, array] = await CreateData(arrayinfo, funcresults)
+  let time = performance.now()
+  const array = funcresults(await GetAllFromApi(arrayinfo), arrayinfo)
+  time = performance.now() - time
   return {
     exercise_name: exerciseName,
     time: ConvertToSeconds(time),

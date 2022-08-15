@@ -1,28 +1,27 @@
 const { ResultFirst, ResultSecond } = require('./results.services')
+const CreateJson = require('./createjson.services')
 
+const uri = 'https://rickandmortyapi.com/api/'
 const infoarray = [
   {
     resource: 'character',
-    query: 'https://rickandmortyapi.com/api/character',
-    char: 'c'
+    query: uri
   },
   {
     resource: 'location',
-    query: 'https://rickandmortyapi.com/api/location',
-    char: 'l'
+    query: uri
   },
   {
     resource: 'episode',
-    query: 'https://rickandmortyapi.com/api/episode',
-    char: 'e'
+    query: uri
   }
 ]
 
 // export modules
 const ResponseTest = async () => {
   return [
-    await ResultFirst(infoarray),
-    await ResultSecond(infoarray)
+    await CreateJson('Char counter', infoarray, ResultFirst),
+    await CreateJson('Char counter', infoarray, ResultSecond)
   ]
 }
 
