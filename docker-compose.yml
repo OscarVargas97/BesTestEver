@@ -4,7 +4,7 @@ services:
     build:
       context: ./
       dockerfile: Dockerfile.nodejs
-    image: "nodejs"
+    image: "nodejs-bestestever"
     ports:
       - target: 3000
         published: ${DD_PORT:-3000}
