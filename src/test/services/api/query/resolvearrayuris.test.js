@@ -1,6 +1,6 @@
 const ResolveArrayUris = require('../../../../services/api/query/resolvearrayuris.services')
 
-describe('CreateArrayQuery', () => {
+describe('ResolveArrayUris', () => {
   // theuri, page, theresource
   test('empty parameters', async () => {
     const result = await ResolveArrayUris()

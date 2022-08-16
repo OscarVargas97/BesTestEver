@@ -55,7 +55,7 @@ Debido a que me encuentro aprendiendo sobre pruebas unitarias y de integración,
 - Aplicación back-end  [aquí](docs/Server.md)
 
 ## Formulario recomendaciones
-A continuación dejare un formulario de google, este formulario tiene la finalidad de entregarme feedback respecto a la codificación y documentación.
+A continuación, dejare un formulario de google, este formulario tiene la finalidad de entregarme feedback respecto a la codificación y documentación.
 
 [Enlace del formulario](https://docs.google.com/forms/d/1jLCJIpYxdx_ycywhJH-1OI6lw2TDYeNaOs8ubq_mEbI/viewform?edit_requested=true)
 
