@@ -1,7 +1,7 @@
 const fetch = require('node-fetch')
 
 const GetPagesAllFromArray = async (arrayinfo) => {
-  if (arrayinfo.every((currentValue) => typeof (currentValue) !== 'object')) { return false }
+  if (!arrayinfo || arrayinfo.every((currentValue) => { return (typeof (currentValue) !== 'object') })) { return false }
   try {
     return await Promise.all(
       arrayinfo
@@ -29,7 +29,8 @@ const ArrayQuery = (theuri, page, theresource) => {
   })
 }
 
-async function CreateArrayQuery (arrayinfo) {
+async function CreateArrayQuery (arrayinfo = []) {
+  if (!arrayinfo) { return false }
   try {
     return (await GetPagesAllFromArray(arrayinfo))
       .reduce((acc, item) => {

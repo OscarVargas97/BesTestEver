@@ -1,5 +1,8 @@
 const { CreateArrayQuery, GetPagesAllFromArray, ArrayQuery } = require('../../../../services/api/query/createarrayquery.services')
 
+const infoarray = [
+  { resource: 'episode', query: 'https://rickandmortyapi.com/api/' }
+]
 describe('CreateArrayQuery', () => {
 // theuri, page, theresource
   test('empty parameters', async () => {
@@ -18,22 +21,17 @@ describe('CreateArrayQuery', () => {
     expect(result).toBe(false)
   })
 
-  test('correct parameter', async () => {
-    const result = await CreateArrayQuery({ query: 'uri', page: 2, resource: 'hi' })
+  test('correct parameter but not real api query', async () => {
+    const result = await CreateArrayQuery({ resource: 'hi', query: 'uri' })
 
     expect(result).toBe(false)
   })
   test('correct parameter', async () => {
-    const result = await CreateArrayQuery({
-      query: 'https:// rickandmortyapi.com/api/location',
-      page: 2,
-      resource: 'location'
-    })
-
-    expect(result).toBe([
-      { resource: 'hi', uri: 'uri?page=1' },
-      { resource: 'hi', uri: 'uri?page=2' }
-    ])
+    const result = await CreateArrayQuery(infoarray)
+    expect(result).toStrictEqual([
+      { resource: 'episode', uri: 'https://rickandmortyapi.com/api/episode?page=1' },
+      { resource: 'episode', uri: 'https://rickandmortyapi.com/api/episode?page=2' },
+      { resource: 'episode', uri: 'https://rickandmortyapi.com/api/episode?page=3' }])
   })
 })
 
@@ -63,6 +61,11 @@ describe('GetPagesAllFromArray', () => {
     const result = await GetPagesAllFromArray([{ query: 3 }])
 
     expect(result).toBe(false)
+  })
+  test('correct parameter', async () => {
+    const result = await GetPagesAllFromArray(infoarray)
+
+    expect(result).toStrictEqual([{ page: 3, query: 'https://rickandmortyapi.com/api/', resource: 'episode' }])
   })
 })
 
@@ -109,10 +112,10 @@ describe('ArrayQuery', () => {
   })
 
   test('correct parameters', () => {
-    const result = ArrayQuery('uri', 2, 'hi')
+    const result = ArrayQuery('uri/', 2, 'hi')
 
     expect(result).toStrictEqual(
-      [{ resource: 'hi', uri: 'uri?page=1' }, { resource: 'hi', uri: 'uri?page=2' }]
+      [{ resource: 'hi', uri: 'uri/hi?page=1' }, { resource: 'hi', uri: 'uri/hi?page=2' }]
     )
   })
 })
